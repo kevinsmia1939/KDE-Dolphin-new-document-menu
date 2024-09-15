@@ -1,0 +1,65 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;
+Actions=odt;ods;odp;odg;odb;odf;docx;xlsx;pptx;vsdx;accdb
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+X-KDE-Submenu=Create new document
+
+# LibreOffice
+[Desktop Action odt]
+Icon=x-office-document
+Name=Create new LibreOffice Writer document
+Exec=bash -c 'DIR="%f"; FILENAME=$(kdialog --title "Enter File Name" --inputbox "Please enter the name of the new file:" "untitled"); if [ ! -z "$FILENAME" ]; then if [ -e "$DIR/$FILENAME.odt" ]; then kdialog --warningyesno "The file $FILENAME.odt already exists. Do you want to replace it?"; if [ $? -eq 0 ]; then touch "$DIR/$FILENAME.odt"; fi else touch "$DIR/$FILENAME.odt"; fi; fi'
+
+[Desktop Action ods]
+Icon=x-office-spreadsheet
+Name=Create new LibreOffice Calc spreadsheet
+Exec=bash -c 'DIR="%f"; FILENAME=$(kdialog --title "Enter File Name" --inputbox "Please enter the name of the new file:" "untitled"); if [ ! -z "$FILENAME" ]; then if [ -e "$DIR/$FILENAME.ods" ]; then kdialog --warningyesno "The file $FILENAME.ods already exists. Do you want to replace it?"; if [ $? -eq 0 ]; then touch "$DIR/$FILENAME.ods"; fi else touch "$DIR/$FILENAME.ods"; fi; fi'
+
+[Desktop Action odp]
+Icon=x-office-presentation
+Name=Create new LibreOffice Impress presentation
+Exec=bash -c 'DIR="%f"; FILENAME=$(kdialog --title "Enter File Name" --inputbox "Please enter the name of the new file:" "untitled"); if [ ! -z "$FILENAME" ]; then if [ -e "$DIR/$FILENAME.odp" ]; then kdialog --warningyesno "The file $FILENAME.odp already exists. Do you want to replace it?"; if [ $? -eq 0 ]; then touch "$DIR/$FILENAME.odp"; fi else touch "$DIR/$FILENAME.odp"; fi; fi'
+
+[Desktop Action odg]
+Icon=x-office-drawing
+Name=Create new LibreOffice Draw drawing
+Exec=bash -c 'DIR="%f"; FILENAME=$(kdialog --title "Enter File Name" --inputbox "Please enter the name of the new file:" "untitled"); if [ ! -z "$FILENAME" ]; then if [ -e "$DIR/$FILENAME.odg" ]; then kdialog --warningyesno "The file $FILENAME.odg already exists. Do you want to replace it?"; if [ $? -eq 0 ]; then touch "$DIR/$FILENAME.odg"; fi else touch "$DIR/$FILENAME.odg"; fi; fi'
+
+[Desktop Action odb]
+Icon=application-x-sqlite3
+Name=Create new LibreOffice Base database
+Exec=bash -c 'DIR="%f"; FILENAME=$(kdialog --title "Enter File Name" --inputbox "Please enter the name of the new file:" "untitled"); if [ ! -z "$FILENAME" ]; then if [ -e "$DIR/$FILENAME.odb" ]; then kdialog --warningyesno "The file $FILENAME.odb already exists. Do you want to replace it?"; if [ $? -eq 0 ]; then touch "$DIR/$FILENAME.odb"; fi else touch "$DIR/$FILENAME.odb"; fi; fi'
+
+[Desktop Action odf]
+Icon=accessories-calculator
+Name=Create new LibreOffice Math formula
+Exec=bash -c 'DIR="%f"; FILENAME=$(kdialog --title "Enter File Name" --inputbox "Please enter the name of the new file:" "untitled"); if [ ! -z "$FILENAME" ]; then if [ -e "$DIR/$FILENAME.odf" ]; then kdialog --warningyesno "The file $FILENAME.odf already exists. Do you want to replace it?"; if [ $? -eq 0 ]; then touch "$DIR/$FILENAME.odf"; fi else touch "$DIR/$FILENAME.odf"; fi; fi'
+
+# Microsoft
+[Desktop Action docx]
+Icon=x-office-document
+Name=Create new Microsoft Word document
+Exec=bash -c 'DIR="%f"; FILENAME=$(kdialog --title "Enter File Name" --inputbox "Please enter the name of the new file:" "untitled"); if [ ! -z "$FILENAME" ]; then if [ -e "$DIR/$FILENAME.docx" ]; then kdialog --warningyesno "The file $FILENAME.docx already exists. Do you want to replace it?"; if [ $? -eq 0 ]; then touch "$DIR/$FILENAME.docx"; fi else touch "$DIR/$FILENAME.docx"; fi; fi'
+
+[Desktop Action xlsx]
+Icon=x-office-spreadsheet
+Name=Create new Microsoft Excel spreadsheet
+Exec=bash -c 'DIR="%f"; FILENAME=$(kdialog --title "Enter File Name" --inputbox "Please enter the name of the new file:" "untitled"); if [ ! -z "$FILENAME" ]; then if [ -e "$DIR/$FILENAME.xlsx" ]; then kdialog --warningyesno "The file $FILENAME.xlsx already exists. Do you want to replace it?"; if [ $? -eq 0 ]; then touch "$DIR/$FILENAME.xlsx"; fi else touch "$DIR/$FILENAME.xlsx"; fi; fi'
+
+[Desktop Action pptx]
+Icon=x-office-presentation
+Name=Create new Microsoft PowerPoint presentation
+Exec=bash -c 'DIR="%f"; FILENAME=$(kdialog --title "Enter File Name" --inputbox "Please enter the name of the new file:" "untitled"); if [ ! -z "$FILENAME" ]; then if [ -e "$DIR/$FILENAME.pptx" ]; then kdialog --warningyesno "The file $FILENAME.pptx already exists. Do you want to replace it?"; if [ $? -eq 0 ]; then touch "$DIR/$FILENAME.pptx"; fi else touch "$DIR/$FILENAME.pptx"; fi; fi'
+
+[Desktop Action vsdx]
+Icon=x-office-drawing
+Name=Create new Microsoft Visio drawing
+Exec=bash -c 'DIR="%f"; FILENAME=$(kdialog --title "Enter File Name" --inputbox "Please enter the name of the new file:" "untitled"); if [ ! -z "$FILENAME" ]; then if [ -e "$DIR/$FILENAME.vsdx" ]; then kdialog --warningyesno "The file $FILENAME.vsdx already exists. Do you want to replace it?"; if [ $? -eq 0 ]; then touch "$DIR/$FILENAME.vsdx"; fi else touch "$DIR/$FILENAME.vsdx"; fi; fi'
+
+[Desktop Action accdb]
+Icon=application-x-sqlite3
+Name=Create new Microsoft Access database
+Exec=bash -c 'DIR="%f"; FILENAME=$(kdialog --title "Enter File Name" --inputbox "Please enter the name of the new file:" "untitled"); if [ ! -z "$FILENAME" ]; then if [ -e "$DIR/$FILENAME.accdb" ]; then kdialog --warningyesno "The file $FILENAME.accdb already exists. Do you want to replace it?"; if [ $? -eq 0 ]; then touch "$DIR/$FILENAME.accdb"; fi else touch "$DIR/$FILENAME.accdb"; fi; fi'
